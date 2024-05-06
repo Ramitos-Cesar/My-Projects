@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Tabuada</title>
+    <link rel="stylesheet" href="assets/css/Cursojs.css"/>
+</head>
+<body>
+    <section class="sessão">
+        <div class="limite">
+            <h1 class="cabecalho">Tabuada</h1>
+            <p class="paragrafo">Crie uma tabuada</p>
+            <input type="number" id="númeroParaGerarTabuada" name="númeroParaGerarTabuada" placeholder="Escreve um número" class="input">
+            <input type="button" value="Criar tabuada" id="botão" class="botão">
+            <p id="res" class="paragrafo"></p>
+        </div>
+    </section>
+    <script>
+        //Declarar variável
+            var botão = document.getElementById('botão');
+        //Chamar Evento
+            botão.addEventListener("click", GerarTabuada);
+        //Criar Função
+            function GerarTabuada(){
+                var númeroParaGerarTabuada = document.getElementById('númeroParaGerarTabuada').value;
+                var contador = 1;
+                var res = document.getElementById('res');
+                var mult = Number(númeroParaGerarTabuada) * contador;
+                if( númeroParaGerarTabuada == ""){
+                    res.innerHTML = `Nada escrito.`;
+                }else{
+                    while(contador <= 9){
+                        var mult = Number(númeroParaGerarTabuada) * contador;
+                        res.innerHTML += `${númeroParaGerarTabuada} x ${contador} = ${mult}<br>`;
+                        contador++;
+                    }
+                }
+            }
+    </script>
+</body>
+</html>

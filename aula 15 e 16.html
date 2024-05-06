@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Aula 15 e 16</title>
+		<style type="text/css">
+		*{
+		margin:0;
+		padding:0;
+		}
+		.classe{
+		background:black;
+		}
+		.classe .cabecalho{
+		color:blue;
+		}
+		.pa {
+		background:yellow;
+		}
+		section .classe > .pe{
+		color:red;
+		}
+		.aula .curso .prin+.ra{
+		background:aqua;
+		color:red;
+		}
+		.aula .curso .ra ~ .re{
+		color:yellow;
+		}
+		[crie="um"]{
+		background:lime;
+		}
+		</style>
+	</head>
+	<body>
+	<section>
+		<div class="classe">
+			<h1 class="cabecalho">Sectores básicos do css(parte_1)</h1>
+			<p class="pa">All</p>
+			<p class="pe">Por tag</p>
+			<p class="pa">Child select</p>
+			
+		</div>
+		<div class="classe" >
+			<h1 class="cabecalho">Sectores básicos do css(parte_1)</h1>
+			<p class="pe" >All</p>
+			<p class="pa" >Por tag</p>
+			<p class="pa" >Child select</p>
+		</div>
+		<div class="classe">
+			<h1 class="cabecalho">Sectores básicos do css(parte_1)</h1>
+			<p class="pa">All</p>
+			<p class="pa">Por tag</p>
+			<p class="pe">Child select</p>
+		</div>
+	</section>
+	<section class="aula" >
+	<div class="curso" crie="um">
+	<h1 class="prin">Sectores básicos do css(parte_2)</h1>
+	<p class="ra" crie="um">All</p>
+	<p class="re">Por tag</p>
+	<p class="ra" crie="um">Child select</p>
+	
+	</div>
+	<div class="curso" >
+	<h1 class="prin" crie="um">Sectores básicos do css(parte_2)</h1>
+	<p class="re" >All</p>
+	<p class="ra" crie="um">Por tag</p>
+	<p class="ra" >Child select</p>
+	</div>
+	<div class="curso" crie="um">
+	<h1 class="prin">Sectores básicos do css(parte_2)</h1>
+	<p class="ra" crie="um">All</p>
+	<p class="ra">Por tag</p>
+	<p class="re" crie="um">Child select</p>
+	</div>
+	</section>
+	</body>
+	<p>
+	<a href="aula_17_e_18.html" >
+	Seguinte</a>
+	</p>
+</html>

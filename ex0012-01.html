@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Hora e data local</title>
+	<link rel="stylesheet" href="assets/css/cursojs.css">
+</head>
+<body>
+    <section class="sessão">
+        <div class="limite">
+            <h1 class="cabecalho">Hora e data local</h1>
+            <p class="paragrafo">Esteje atualizado</p>
+            <div id="hora" class="local"></div>
+            <div id="minutos" class="local"><span >Minutos</span></div>
+            <p id="res" class="paragrafo"></p>
+        </div>
+    </section>
+    <script>
+        //Declarar Variável
+            var hora= new Date().getHours();
+            var minutos= new Date().getMinutes();
+            var diaDaSemana = new Date().getDay();
+            var dia = new Date().getDate();
+            var mês = new Date().getMonth();
+            var ano = new Date().getFullYear();
+            var h = document.getElementById("hora");
+            var m = document.getElementById("minutos");
+            var res = document.getElementById("res");
+        //Condições com if than else
+            if(hora < 12){
+                res.innerHTML = `Bom bia`;
+                if(hora <= 9 ){
+                    h.innerHTML = `0${hora}<br><span style="color:black; font: bold 1rem Arial">Horas</span>`;
+                    m.innerHTML = `${minutos}<br><span style="color:black; font: bold 1rem Arial">Minutos</span>`;
+                    
+                }else if(minutos <= 9){
+                    h.innerHTML = `${hora}<br><span style="color:black; font: bold 1rem Arial">Horas</span>`;
+                    m.innerHTML = `0${minutos}<br><span style="color:black; font: bold 1rem Arial">Minutos</span>`;
+                }else{
+                    h.innerHTML = `${hora}<br><span style="color:black; font: bold 1rem Arial">Horas</span>`;
+                    m.innerHTML = `${minutos}<br><span style="color:black; font: bold 1rem Arial">Minutos</span>`;
+                }
+            }else if(hora <= 18){
+                res.innerHTML = `Boa tarde`;
+                if(minutos <= 9){
+                    h.innerHTML = `${hora}<br><span style="color:black; font: bold 1rem Arial">Horas</span>`;
+                    m.innerHTML = `0${minutos}<br><span style="color:black; font: bold 1rem Arial">Minutos</span>`;
+                }else{
+                    h.innerHTML = `${hora}<br><span style="color:black; font: bold 1rem Arial">Horas</span>`;
+                    m.innerHTML = `${minutos}<br><span style="color:black; font: bold 1rem Arial">Minutos</span>`;
+                }
+            }else{
+                res.innerHTML = `Boa noite`;
+                if(minutos <= 9){
+                    h.innerHTML = `${hora}<br><span style="color:black; font: bold 1rem Arial">Horas</span>`;
+                    m.innerHTML = `0${minutos}<br><span style="color:black; font: bold 1rem Arial">Minutos</span>`;
+                }else{
+                    h.innerHTML = `${hora}<br><span style="color:black; font: bold 1rem Arial">Horas</span>`;
+                    m.innerHTML = `${minutos}<br><span style="color:black; font: bold 1rem Arial">Minutos</span>`;
+                }
+            }
+        //Condições com witch
+            switch(diaDaSemana){
+                case 0:
+                    res.innerHTML += `<br>Hoje é domingo`;
+                    break
+                case 1:
+                    res.innerHTML += `<br>Hoje é segunda-feira`;
+                    break
+                case 2:
+                    res.innerHTML += `<br>Hoje é terça-feira`;
+                    break
+                case 3:
+                    res.innerHTML += `<br>Hoje é quarta-feira`;
+                    break
+                case 4:
+                    res.innerHTML += `<br>Hoje é quinta-feira`;
+                    break
+                case 5:
+                    res.innerHTML += `<br>Hoje é sexta-feira`;
+                    break
+                case 6:
+                    res.innerHTML += `<br>Hoje é sábado`;
+                    break
+                default:
+                    res.innerHTML += `<br>Dia não existente`;
+                    break
+            }
+        //Condições com if than else
+            if(dia <= 9){
+                res.innerHTML += `, dia 0${dia}`;
+            }else{
+                res.innerHTML += `, dia ${dia}`;
+            }
+        //Condições com witch
+            switch(mês){
+                case 0:
+                    res.innerHTML += ` do mês de janeiro`;
+                    break
+                case 1:
+                    res.innerHTML += ` do mês de fevereiro`;
+                    break
+                case 2:
+                    res.innerHTML += ` do mês de março`;
+                    break
+                case 3:
+                    res.innerHTML += ` do mês de abril`;
+                    break
+                case 4:
+                    res.innerHTML += ` do mês de maio`;
+                    break
+                case 5:
+                    res.innerHTML += ` do mês de junho`;
+                    break
+                case 6:
+                    res.innerHTML += ` do mês de julho`;
+                    break
+                case 7:
+                    res.innerHTML += ` do mês de agosto`;
+                    break
+                case 8:
+                    res.innerHTML += ` do mês de setembro`;
+                    break
+                case 9:
+                    res.innerHTML += ` do mês de outubro`;
+                    break
+                case 10:
+                    res.innerHTML += ` do mês de novembro`;
+                    break
+                case 11:
+                    res.innerHTML += ` do mês de desembro`;
+                    break
+                default:
+                    res.innerHTML += `<br>Mês não existente`;
+                    break
+            }
+        res.innerHTML += ` do ano de ${ano}.`;
+    </script>
+</body>
+</html>

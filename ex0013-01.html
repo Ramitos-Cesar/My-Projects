@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Contador</title>
+	<link rel="stylesheet" href="assets/css/cursojs.css">
+</head>
+<body>
+    <section class="sessão">
+        <div class="limite">
+            <h1 class="cabecalho">Contador</h1>
+            <p class="paragrafo">Informe um número</p>
+            <input type="number" id="númeroinicial" name="númeroinicial" placeholder="Número" class="input">
+            <input type="number" id="númerofinal" name="númerofinal" placeholder="Número" class="input">
+            <input type="button" value="Contar" id="botão" class="botão">
+            <p id="res" class="paragrafo"></p>
+            <p id="ult" class="paragrafo"></p>
+        </div>
+    </section>
+    <script>
+        var botão = document.querySelector('input#botão');
+        botão.addEventListener('click', contar);
+        function contar(){
+            var n1 = document.querySelector('input#númeroinicial').value;
+            var n2 = document.querySelector('input#númerofinal').value;
+            var res = document.querySelector('p#res');
+            var ult = document.querySelector('p#ult');
+            if(n1 == "" || n2 == ""){
+                res.innerHTML = `Nada para contar!`;
+            }else {
+                do{
+                    res.innerHTML ='Comçou a contar:';
+                    ult.innerHTML += `${n1} `;
+                    n1++;
+                }while(n1 <= n2);
+            };
+        };
+    </script>
+</body>
+</html>

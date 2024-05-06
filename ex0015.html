@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>O que te caracteriza?</title>
+    <link rel="stylesheet" href="assets/css/Cursojs.css">
+</head>
+<body>
+    <section class="sessão">
+        <div class="limite">
+            <h1 class="cabecalho">Quem és?</h1>
+            <p class="paragrafo">Descreva o que te caracteriza.</p>
+            <input type="text" id="nome" name="nome" placeholder="Nome" class="input">
+            <input type="number" id="idade" name="idade" placeholder="Idade" class="input">
+            <input type="text" id="gostos" name="gostos" placeholder="Gostos" class="input">
+            <input type="color" id="cor" name="cor" class="input">
+            <input type="button" value="Ver características" id="botão" class="botão">
+            <p id="res" class="paragrafo"></p>
+        </div>
+    </section>
+    <script>
+        var botão = document.querySelector('input#botão');
+        botão.addEventListener('click', verpers);
+        function verpers(){
+            const personalidade = [];
+            personalidade[0] = document.querySelector('input#nome').value;
+            personalidade[1] = document.querySelector('input#idade').value;
+            personalidade[2] = document.querySelector('input#gostos').value;
+            personalidade[3] = document.querySelector('input#cor').value;
+            var p = document.querySelector('p#res');
+            if( personalidade[0] == "" || personalidade[1] == "" || personalidade[2] == ""){
+                p.innerHTML = `Nínguem para descrever.`;
+            }else{
+                p.innerHTML = `O que te caracteriza é:<br> O teu nome é ${personalidade[0]}, tens ${personalidade[1]} anos de idade, gostas de ${personalidade[2]} e a tua cor preferida é <p style="width: 1rem; height: 1rem; background: ${personalidade[3]}; display: inline-block;"></p>.`;
+            };
+        };
+    </script>
+</body>
+</html>

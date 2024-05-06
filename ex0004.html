@@ -1,0 +1,40 @@
+<! DOCTYPE html>
+<html lang=”PT-BR”>
+	<head>
+	   <meta charset=”UTF-8”>
+	   <meta name=”viewport” content=”width-device-width, initial-scale-1.0”>
+	   <meta http-equiv=”X-UA-Compatible” contente=”ie-edge”>
+	   <title>Meu primeiro programa</title>
+	   <link rel="stylesheet" href="assets/css/Cursojs.css">
+    </head>
+    <body onload="gostou()">
+        <section class="sessão">
+            <div class="limite">
+                <h1 id="nomedousuario" class="cabecalho"></h1>
+                <p id="gostodousuario" class="paragrafo"></p>
+            </div>
+        </section>
+	   <script>
+        
+            function gostou(){
+           
+                window.alert("Tem perguntas vindo!");
+                var nome = window.prompt("Qual é o seu nome?");
+                var gosto = window.confirm("Gosta de JavaScript?");
+
+
+                if (nome == null || nome == undefined || nome == ""){
+                    document.querySelector('h1#nomedousuario').innerText = `Por favor escreva um nome!`;
+                }else if(gosto == false){
+                    document.querySelector("p#gostodousuario").innerText = `Ooh! ${nome}, não está gostando de JavaScript`; 
+                }else{
+                    document.querySelector("h1#nomedousuario").innerText = `Olá! ${nome}.`; 
+
+                    document.querySelector('p#gostodousuario').innerText = `Hey!!! Que bom que ${nome} está gostando de JavaScript.`;
+                }
+        
+           }  
+                
+       </script>
+</body>
+</html>

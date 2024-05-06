@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Aula 17 e 18</title>
+<style type="text/css">
+[atributo~="meu"]{
+color:red;
+}
+[traço|="o-i"]{
+color:blue;
+}
+[Termina="com"]{
+color:red;
+}
+[Começa^="c"]{
+color:green;
+}
+[Contém*="ua"]{
+color:aqua;
+}
+	.p1{
+	transition:all 2s ease-in-out;
+	}
+	.p1:hover{
+	text-decoration:underline;
+	color:white;
+	background:black;
+	}
+	.url{
+	background:black;
+	}
+	.url:link{
+	background:red;
+	}
+	.url:visited{
+	color:green;
+	}
+	.url:hover{
+	color:white;
+	text-decoration:overline;
+	}
+	.url:active{
+	color:yellow;
+	}
+	.focus:focus{
+	box-shadow:0 0 5px blue;
+	outline:none;
+	border:2px solid aqua;
+	}
+	.disabled:disabled{
+	border:5px solid red;
+	cursor:n-resize;
+	}
+	.enabled:enabled{
+	border:5px solid green;
+	}
+	.checked:checked{
+	width:50px;
+	height:50px;
+	}
+	.cheched+p:checked + p{
+	background:aqua;
+	}
+	li:first-child{
+	color:aqua;
+	}
+	li:last-child{
+	color:green;
+	}
+</style>
+</head>
+<body>
+<section>
+<h1>Selectores de atributono css</h1>
+<p atributo="meu">Por espaço</p>
+<p traço="o-i">Por traço</p>
+<p termina="com">Termina com</p>
+<p Começa="com">Começa com</p>
+<p contém="qual">Contém</p>
+</section>
+	<section class="one" >
+		<h1>Pseudo classes <br>
+		+ <br>
+		Estados de elementos</h1>
+		<p class="p1" >Hover</p>
+		<a href="#" class="url" >Link</a><br>
+		<a href="#" class="url">Link</a><br>
+		<a href="#" class="url">Link</a><br>
+		<input type="text" class="focus"><br>
+		<input type="text" class="disabled" disabled="disabled"><br>
+		<input type="text" class="enabled"><br>
+		<input type="text" class="required"><br>
+		<input type="checkbox" class="checked"><br>
+		<input type="checkbox" class="cheched+p"><br>
+		<p>Só para teste</p><br>
+		<nav>
+			<ul>
+				<li>Teste 1</li>
+				<li>Teste 2</li>
+				<li>Teste 3</li>
+			</ul>
+		</nav>
+	</section>
+	<p>
+	<a href="aula_19_e_20.html" >
+	Seguinte</a>
+	</p>
+</body>
+</html>

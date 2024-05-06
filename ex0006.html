@@ -1,0 +1,60 @@
+<!DOCTYPEhtml>
+<html lang=”PT-BR”>
+	<head>
+	   <meta charset=”UTF-8”>
+	   <meta name=”viewport” content=”width-device-width, initial-scale-1.0”>
+	   <meta http-equiv=”X-UA-Compatible” contente=”ie-edge”>
+	   <title>Meu primeiro programa</title>
+	   <link rel="stylesheet" href="assets/css/Cursojs.css">
+    </head>
+    <body>
+        <section class="sessão">
+        <div class="limite">
+            <h1 id="nomedousuario" class="cabecalho">Olá, mundo!</h1>	
+            <p id='gostodousuario' class="paragrafo">Estou apredendo JavaScript</p>
+            <input type="button" class="botão" onclick="ex0001_1()" value="Exemplo 06.1">
+            <input type="button" class="botão" onclick="ex0001_2()" value="Exemplo 06.2">
+            <input type="button" class="botão" onclick="ex0001_3()" value="Exemplo 06.3">
+        </div>
+    </section>
+	   
+	   <script>
+        
+           function ex0001_1(){
+                var nome = window.prompt('Qual é o seu nome?');
+               if(nome === "" || nome == null || nome == undefined){
+                   window.alert(`Escreve um nome!`);
+               }else{
+                   window.alert(`É um prazer te conhecer ${nome}.`);
+               }
+                
+            }
+            
+           function ex0001_2(){
+               var n1 = Number(window.prompt('Digite um número.'));
+               var n2 = Number(window.prompt('Digite outro número.'));
+               var s = n1 + n2;
+               if(n1 == "" || n1 == null || n1 == undefined){
+                   window.alert('Você deixou o primeiro campo vazio!');
+               }else if(n2 == "" || n2 == null || n2 == undefined){
+                   window.alert('Você deixou o segundo campo vazio!');
+               }else{
+                   window.alert(`A soma dos valores é ${s}`);
+               }
+               
+           }
+          
+          function ex0001_3(){
+              var nome = window.prompt('Digite o seu nome.');
+              if(nome == "" || nome == null || nome == undefined){
+                  document.write(`Escreve um nome!`);
+              }else{
+                  document.write(`Olá, ${nome}! Seu nome tem ${nome.length} letras.<br>`);
+                  document.write(`O seu nome em maiúsculas é ${nome.toUpperCase()}.<br>`);
+                  document.write(`O seu nome em menúsculas é ${nome.toLowerCase()}.<br>`);
+              }
+            }
+                
+       </script>
+</body>
+</html>

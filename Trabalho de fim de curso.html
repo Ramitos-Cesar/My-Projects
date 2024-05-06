@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html>
+	
+	<head>
+	
+		<meta charset="utf-8" />
+		
+		<title>Trabalho de fim de curso</title>
+		
+		<style type="text/css">
+
+		*{
+			padding:0;
+			margin:0;
+			box-sizing:border-box;
+		}
+		/*Estilização por tags*/
+		html {
+			font-size:62.5%;
+			scroll-behavior:smooth;
+		}
+		body {
+			font-family:Arial,sans-serif;
+			font-size:1.6rem;
+		}
+		h1{
+			font-family:fantasy;
+			font-size:8rem;
+		}
+		h2{
+			font-family:fantasy;
+			font-size:7rem;
+		}
+		h3{
+			font-family:fantasy;
+			font-size:6rem;
+		}
+		h4{
+			font-family:fantasy;
+			font-size:5rem;
+		}
+		h5{
+			font-family:fantasy;
+			font-size:4rem;
+		}
+		h6{
+			font-family:fantasy;
+			font-size:3rem;
+		}
+		/*Estilização por classes*/
+		.main-bg{
+			background-image:url("assets/img/imgsvg01.jpg");
+			background-size:cover;
+			background-position:center;
+		}
+		.section{
+			min-height:250rem;
+		}
+		.main-content{
+			max-width:90rem;
+			margin:0 auto;
+		}
+		.menu {
+			background:#fff;
+			position:absolute;
+			top:0;
+			left:0;
+			right:0;
+			width:100%;
+			border-bottom:0.2rem;
+			border-bottom-style:solid;
+			border-bottom-color:#00FF7F;
+			height:21rem;
+		}
+		.centro {
+			text-align:center;
+		}
+		.logoimg {
+			width:30rem;
+			height:13rem;
+			border-radius:1rem;
+			margin-top:1rem;
+		}
+		.para{
+			font-size:4rem;
+			text-transform:uppercase;
+			margin-top:1rem;
+		}
+		.para a{
+			text-decoration:none;
+			color:#00FF7F;
+		}
+		.botaomenu {
+			width:10rem;
+			height:10rem;
+			border-radius:100%;
+			position:absolute;
+			top:1rem;
+			right:1rem;
+			background:#2F4F4F;
+			color:#00FF7F;
+			border:0.2rem solid #00FF7F;
+			font:bold 3rem arial;
+			z-index:2;
+			visibility:visible;
+		}
+		.botaomenu1 {
+			width:10rem;
+			height:10rem;
+			border-radius:100%;
+			position:fixed;
+			top:1rem;
+			right:1rem;
+			background:#2F4F4F;
+			color:#00FF7F;
+			border:0.2rem solid #00FF7F;
+			font:bold 3rem arial;
+			z-index:2;
+			visibility:collapse;
+		}
+		.botaomenu2 {
+			width:10rem;
+			height:10rem;
+			border-radius:100%;
+			position:fixed;
+			bottom:1rem;
+			right:1rem;
+			background:#2F4F4F;
+			border:0.2rem solid #00FF7F;
+		}
+		.back-top{
+			text-decoration:none;
+			color:#00FF7F;
+			font:bold 3rem arial;
+		}
+		nav {
+			text-align:center;
+		}
+		nav ul{
+			list-style:none;
+		}
+		nav ul li{
+			margin:6rem 0; 
+		}
+		nav ul li a{
+			text-align:center;
+			text-decoration:none;
+			font-size:7rem;
+			transition:all 300ms ease-in-out;
+			visibility:collapse;
+		}
+		nav ul li a:hover{
+			border-bottom:0.3rem;
+			border-bottom-style:solid;
+			border-bottom-color:#00FF7F;
+			background:rgb(128, 128, 128,);
+			border-radius:1rem;
+		}
+		.espaço-1{
+			height:22rem;
+		}
+		.intro-text-content {
+			padding-top:25rem;
+		}
+		.intro-text-content h2{
+			color:#00FF7F;
+			line-height:2;
+			text-shadow:-0.5rem 0.5rem #2F4F4F;
+			font-size:8rem;
+			margin-bottom:5rem;
+		}
+		.intro-text-content p {
+			color:#00FF7F;
+			font-size:3rem;
+			margin-bottom:8rem;
+		}
+		.intro-text-content p span {
+			display:block;
+			margin:4rem 0;
+			text-indent:2rem;
+		}
+		.intro-img img {
+			width:80rem;
+			height:50rem;
+			margin:3rem 2rem;
+			border-radius:1rem;
+		}
+		.top3-content{
+			max-width:80rem;
+			direction:ltr;
+			text-align:center;
+			padding-top:25rem;
+		}
+		.top3-content h2{
+			color:#00FF7F;
+			line-height:2;
+			text-shadow:-0.5rem 0.5rem #2F4F4F;
+			font-size:8rem;
+			margin-bottom:5rem;
+		}
+		.top3-content p{
+			color:#00FF7F;
+			font-size:3rem;
+			margin-bottom:3rem;
+		}
+		.top3-content p span {
+			display:block;
+			margin:4rem 0;
+			text-indent:2rem;
+		}
+		.grid-main-heading {
+			color:#00FF7F;
+			line-height:2;
+			text-shadow:-0.5rem 0.5rem #2F4F4F;
+			font-size:8rem;
+			margin-bottom:5rem;
+		}
+		.grid-one-content p{
+			color:#00FF7F;
+			margin:1rem;
+		}
+		</style>
+	
+	</head>
+	
+	<body>
+	
+		<button class="botaomenu" id="abrirmenu" onclick="abrir()">Menu</button>
+		<button class="botaomenu1" id="fecharmenu" onclick="fechar()">X</button>
+		<button class="botaomenu2" ><a href="#" class="back-top" >Top</a></button>
+
+		<aside class="menu white-bg" id="menu" >
+			
+			<section class="menu-content" >
+				
+				<div class="centro" >
+				
+					<img class="logoimg" src="assets/img/programacaoweb03.jpg" alt="programacaoweb03" >
+				
+					<h1 class="para" ><a href="#" onclick="fechar()">Programação Web</a></h1>
+				
+				</div>
+				
+				<nav>
+				
+					<ul>
+						<li><a href="#inicio" onclick="fechar()" id="link1" >ínicio</a></li>
+						<li><a href="#pw" onclick="fechar()" id="link2">Programação Web</a></li>
+						<li><a href="#html" onclick="fechar()" id="link3">HTML</a></li>
+						<li><a href="#" onclick="fechar()" id="link4">CSS</a></li>
+						<li><a href="#" onclick="fechar()" id="link5">Javascript</a></li>
+						<li><a href="#" onclick="fechar()" id="link6">PHP</a></li>
+						<li><a href="#" onclick="fechar()" id="link7">SQL</a></li>
+						<li><a href="#" onclick="fechar()" id="link8">Node.js</a></li>
+					</ul>
+				
+				</nav>
+			
+			</section>
+		
+		</aside>
+
+		<div class="espaço-1 main-bg" ></div>
+
+		<section id="inicio" class="main-bg section" >
+
+			<div class="main-content intro-content" >
+
+				<div class="intro-text-content" >
+				
+					<h2>Introdução</h2>
+				
+					<p><span class="" >Nesta primeira página, vamos ver o que iremos abordar neste nosso pequeno site.</span>
+						<span>Vamos conhecer a programação web, algumas das suas linguangens, qual o seu envolvimento com a internet.</span>
+						<span>E muito mais! Então venha comigo, conhecer um pouco deste mundo que a programação Web...</span></p>
+			
+				</div>
+
+				<div class="intro-img" >
+
+					<img src="assets/img/programacaoweb01.jpg" alt="programacaoweb01" >
+			
+					<img src="assets/img/programacaoweb02.jpg" alt="programacaoweb02" >
+			
+				</div>
+			
+			</div>
+
+		</section>
+
+		<section id="pw" class="white-bg section " >
+
+			<div class="main-content top3-content" >
+				
+				<h2>Programação Web</h2>
+				
+				<p>
+					<b>Desenvolvimento web</b> é o termo utilizado para descrever o desenvolvimento de sites, na Internet ou numa intranet.
+					O profissional que trabalha desenvolvendo websites pode ser um web designer (desenvolvedor do layout) ou um web developer (desenvolvedor de sistemas).
+					O desenvolvimento refere-se a um processo de construção e testes do software especifico para a web, com a finalidade de se obter um conjunto de programas,
+					que satisfazem as funções pretendidas, quer em termos de usabilidade dos usuários ou compatibilidade com outros programas existentes.
+					O desenvolvimento web pode variar desde simples páginas estáticas a aplicações ricas, comércios eletrônicos ou redes sociais.
+				</p>
+					
+				<p>
+					<b>Áreas de atuação</b>
+					<br>
+					<br>
+					<b>Front-end</b>
+					<br>
+					<br>
+					Corresponde na prática de converter dados para uma interface gráfica,
+					de forma que permita uma interação e visualização por parte do usuário.
+					<br>
+					<br>
+					CSS<br>
+					HTML<br>
+					XHTML<br>
+					Javascript<br>
+					AJAX<br>
+					Flash<br>
+					Microsoft Silverlight<br>
+					Swipty<br>
+					spdropkit<br>
+					<br>
+				</p>
+				
+				<p>
+					<b>Back-end</b>
+					<br>
+					<br>
+					Consiste em uma camada que processa as requisições dos usuários em um servidor.
+					<br>
+					<br>
+					PHP<br>
+					ASP<br>
+					.NET<br>
+					Node.js (JavaScript)<br>
+					Perl (via CGI, FastCGI e, recentemente, PSGI)<br>
+					Java, J2EE, WebObjects<br>
+					SSJS, Aptana Jaxer, Mozilla Rhino<br>
+					Python, Django<br>
+					Ruby, Ruby on Rails<br>
+					Smalltalk Seaside<br>
+					ColdFusion<br>
+					Lotus Domino<br>
+					<br>
+					<br>
+					<b>Bancos de dados</b>
+					<br>
+					<br>
+					MySQL<br>
+					PostgreSQL<br>
+					SQLite<br>
+					Microsoft SQL Server<br>
+					Firebird<br>
+					Apache Derby<br>
+					Oracle<br>
+					DB2<br>
+				</p>
+				
+				<p>
+					<b>Áreas interdisciplinares</b>
+					<br>
+					<br>
+					Design gráfico, web design
+					Arquitetura da informação
+					Usabilidade, acessibilidade
+					Considerações sobre segurança
+					O desenvolvimento web leva em consideração fatores como a verificação de erros na entrada de dados através de formulários,
+					assim como a filtragem e a normalização dos dados que são alimentados por esses meios. Falhas na segurança como o SQL injection devem ser testadas,
+					e o uso de scripts pode ajudar a encontrar outras falhas de segurança mais técnicas.
+					As peculiaridades de cada sistema dependem das tecnologias usadas, e muitas vezes não é função do desenvolvedor manter o nível de segurança,
+					mas sim da plataforma, por exemplo o Apache Server, ou o php.swipty.org o spdropkit.org developer web futuro da web.
+				</p>
+				
+   			</div>
+
+		</section>
+
+		<section id="html" class="grid-one main-bg section" >
+			
+			<div class="grid-one-content main-content" >
+
+				<h2 class="grid-main-heading" >HTML</h2>
+				
+				<p class="grid-description" >
+					<b>HTML</b>
+					<br>
+					Uma linguagem de marcação utilizada na construção de páginas na Web.
+				</p>
+
+				<div class="grid" >
+					
+					<article>
+
+						<h3></h3>
+						
+						<p>
+							HTML (abreviação para a expressão inglesa HyperText Markup Language,
+							que significa: "Linguagem de Marcação de Hipertexto") é uma linguagem
+							de marcação utilizada na construção de páginas na Web. Documentos HTML
+							podem ser interpretados por navegadores. A tecnologia é fruto da junção
+							entre os padrões HyTime e SGML.
+						</p>
+						
+					</article>
+					
+					<article>
+					
+						<h3></h3>
+					
+						<p>
+							<b>HTML</b>
+							(Hypertext Markup Language)<br>
+							<br>
+							HTML5
+							<br>
+							Extensão do arquivo<br>
+							.html<br>
+							.htm<br>
+							MIME<br>
+							text/html<br>
+							Type code<br>
+							TEXT<br>
+							Desenvolvido por<br>
+							W3C & WHATWG<br>
+							Tipo de formato<br>
+							Linguagem de marcação<br>
+							Padronização<br>
+							ISO/IEC 15445<br>
+							W3C HTML latest recommendation<br>
+							HTML Living Standard<br>
+							W3C HTML 5.1<br>
+							Página oficial<br>
+							www.w3.org/html/<br>
+							whatwg.org<br>
+							HyTime é um padrão para a representação estruturada de hipermídia e conteúdo baseado em tempo.
+							Um documento é visto como um conjunto de eventos concorrentes dependentes de tempo (como áudio, vídeo, etc.),
+							conectados por hiperligações (em inglês: hyperlink e link). O padrão é independente de outros padrões de processamento
+							de texto em geral.
+							<br>
+							SGML é um padrão de formatação de textos. Não foi desenvolvido para hipertexto, mas tornou-se conveniente para transformar
+							documentos em hiper-objetos e para descrever as ligações.
+							<br>
+							<br>
+							<b>História</b>
+							<br>
+							Tim Berners-Lee em 2008.<br>
+							Tim Berners-Lee (físico britânico) criou o HTML original (e outros protocolos associados como o HTTP), numa estação NeXTcube, usando o ambiente de desenvolvimento NeXTSTEP.
+							Na época, a linguagem não era uma especificação, mas uma coleção de ferramentas para resolver um problema de Tim: a comunicação e disseminação das pesquisas entre ele e o seu grupo de colegas.
+							A sua solução, combinada com a então emergente internet pública (que tornar-se-ia a Internet), ganhou atenção mundial.
+							<br>
+							As primeiras versões do HTML foram definidas com regras sintáticas flexíveis, o que ajudou aqueles sem familiaridade com a publicação na Web. Através do tempo, a utilização de ferramentas para
+							autoria de HTML aumentou, assim como a tendência em tornar a sintaxe cada vez mais rígida. Apesar disso, por questões históricas (retrocompatibilidade), os navegadores ainda hoje conseguem interpretar
+							páginas web que estão longe de ser um código HTML válido.
+							<br>
+							A linguagem foi definida em especificações formais na década de 1990, inspiradas nas propostas originais de Tim Berners-Lee em criar uma linguagem baseada em SGML para a Internet.
+							A primeira publicação foi esboçada por Berners-Lee e Dan Connolly e publicada em 1993 na IETF, como uma aplicação formal para o SGML (com uma DTD em SGML definindo a gramática).
+							A IETF criou um grupo de trabalho para o HTML no ano seguinte, e publicou o HTML 2.0 em 1995. Desde 1996, as especificações HTML vêm sendo mantidas, com o auxílio de fabricantes de software,
+							pelo World Wide Web Consortium (W3C). Apesar disso, em 2000 a linguagem tornou-se também uma norma internacional (ISO/IEC 15445:2000). A recomendação HTML 4.01 foi publicada no final de 1999 pelo W3C.
+							Uma errata ainda foi lançada em 2001.
+							<br>
+							Desde a publicação do HTML 3.5 no final de 1997, o grupo de trabalho da W3C tem cada vez mais — e de 2002 a 2006, de forma exclusiva — focado no desenvolvimento do XHTML, uma especificação HTML baseada
+							em XML que é considerada pela W3C como um sucessor do HTML. O XHTML faz uso de uma sintaxe mais rigorosa e menos ambígua para tornar o HTML mais simples de ser processado e estendido.
+							<br>
+							Em janeiro de 2008 o W3C publicou a especificação do HTML5 como Working Draft. Apesar de sua sintaxe ser semelhante à de SGML, o HTML5 abandonou qualquer tentativa de ser uma aplicação SGML e definiu
+							explicitamente sua própria serialização "html", além de uma alternativa baseada em XML, o XHTML5.
+							<br>
+							<br>
+							<b>Várias versões HTML foram publicadas:</b>
+							<br>
+							Versão	Ano<br>
+							HTML	1991<br>
+							HTML 2.0	1995<br>
+							HTML 3.2	1997<br>
+							HTML 4.01	1999<br>
+							XHTML	2000<br>
+							HTML5	2014<br>
+							HTML5.1	2016 e 2017 (2ª ed.)<br>
+							HTML5.2	2017<br>
+							<br>
+							<br>
+							<b>Marcas (tags)</b>
+							<br>
+							Todo documento HTML possui marcadores (do inglês: tags), palavras entre parênteses angulares (chevron) (< e >); esses marcadores são os comandos de formatação da linguagem. Um elemento é formado por
+							um nome de marcador (tag), atributos, valores e filhos (que podem ser outros elementos ou texto). Os atributos modificam os resultados padrões dos elementos e os valores caracterizam essa mudança.
+							Exemplo de um elemento simples (não possui filhos):
+							<br>
+							(<)hr (/>)
+							<br>
+							Exemplo de um elemento composto (possui filhos):
+							<br>
+							(<)a href="https://pt.wikipedia.org/">Wikipédia(</)a(>)<br>
+						(<)a> é o marcador de abertura<br>
+						(</)a> é o marcador de fechamento<br>
+						href é o atributo onde é definido a url, que será acessada ao clicar no link.<br>
+						Outro exemplo de elemento composto (possui filhos):
+						<br>
+						(<)a href="https://pt.wikipedia.org" target="_self">(<)p>Wikipédia(</)p>(</)a><br>
+						p = marcador que define um parágrafo.<br>
+						a = marcador que define uma hiperligação.<br>
+						href = atributo que define a URL da hiperligação.<br>
+						target = atributo que define a forma como a hiperligação será aberta.<br>
+						_self = valor do atributo Target que define que a hiperligação será aberta na mesma guia.<br>
+						/ = define o fechamento do elemento<br>
+						Isso é necessário porque os marcadores servem para definir a formatação de uma porção do documento, e assim marcamos onde começa e termina o conteúdo que receberá a formatação ou marcação necessária, específica.
+						Alguns elementos são chamados “vazios”, pois não marcam uma região de texto, apenas inserem algum elemento no documento.
+						<br>
+						Cada elemento tem os seus atributos possíveis e os seus valores. Um exemplo, é o atributo href que pode ser usado com o elemento a, com o link mas que não pode ser usado com o elemento meta.
+						Isso quer dizer que devemos saber exatamente quais os atributos e valores possíveis para cada elemento.
+						<br>
+						De uma maneira geral o HTML é um poderoso recurso, sendo uma linguagem de marcação muito simples e acessível voltada para a produção e compartilhamento de documentos, imagens, vídeos e áudio via streaming.
+						<br>
+						Na sua versão mais recente, o HTML5, é possível criar marcadores personalizados com JavaScript, linguagem de programação diretamente compatível com o HTML. Cada tag pode ter uma função específica utilizando uma API (Interface de programação de aplicações) diferente, assim como seus nomes e estilos.
+						<br>
+						<br>
+						<b>Edição de documentos HTML</b>
+						<br>
+						<br>
+						Os documentos em HTML são arquivos de texto simples que podem ser criados e editados em qualquer editor de textos comum, como o Bloco de Notas do Windows, ou o TextEdit, do Macintosh.
+						Para facilitar a produção de documentos, no mercado existem editores HTML específicos, com recursos sofisticados, que facilitam a realização de tarefas repetitivas, inserção de objetos, elaboração de tabelas e outros recursos (Ver lista abaixo). Basicamente dividem-se em dois tipos:
+						<br>
+						Editores de texto fonte: inserem automaticamente os marcadores, orientando a inserção de atributos e marcações<br>
+						Editores WYSIWYG: oferecem ambiente de edição com um "esboço" resultado final das marcações<br>
+						<br>
+						<b>Estrutura básica de um documento<b>
+						<br>
+						<br>
+						A estrutura básica de um documento HTML (Hyper Text Markup Language - Linguagem de Marcação de Hypertexto), apresenta as seguintes marcações:
+						<br>
+						(<)!DOCTYPE html><br>
+						(<)html lang="pt-BR"><br>
+						(<)head><br>
+						(<)meta charset="UTF-8" /><br>
+						(<)meta name="viewport" content="width=device-width, initial-scale=1" /><br>
+						(<)title>Título do Documento</(title><br>
+						</)head><br>
+						(<)body><br>
+						<br>
+						Aqui fica a página que será visível para todos, onde pode-se inserir
+						textos, imagens, links para outras páginas, etc, geralmente usa-se:
+						<br>
+						(<)div>Tag para criar um bloco, mais utilizado com CSS</)div>
+						<br>
+						(<)span>Tag para modificação de uma parte do texto da página</(span>
+						<br>
+						(<)img src="imagem.jpg" />
+						<br>
+						(<)a href="https://www.wikipedia.org">Wikipédia, A Enciclopédia Livre(</)a(>)<br>
+						</(body(>)<br>
+						</(html(>)<br>
+							Os marcadores HTML não são sensíveis à caixa, portanto tanto faz escrever <)HTML>, <)Html>, <)html> ou <)HtMl>.
+							<br>
+							Os marcadores básicos de HTML, cuja presença é altamente recomendada nas páginas são:
+							<br>
+							<)html>: define o início de um documento HTML e indica ao navegador que todo conteúdo posterior deve ser tratado como uma série de códigos HTML.<br>
+							<)head>: define o cabeçalho de um documento HTML, que traz informações sobre o documento que está sendo aberto.<br>
+							<(body>: define o conteúdo principal, o corpo do documento. Esta é a parte do documento HTML que é exibida no navegador.<br>
+							No corpo podem-se definir atributos comuns a toda a página, como cor de fundo, margens, e outras formatações.
+						</p>	
+						
+						<p>
+							<b>Cabeçalho</b>
+							<br>
+							<br>
+							Dentro do cabeçalho podemos encontrar os seguintes elementos:
+							<br>
+							<)title></(title>: define o título da página, que é exibido na barra de título dos navegadores.<br>
+							<)style></(style>: define formatação em CSS.<br>
+							<)script></(script>: define scripts JavaScript ou importa de um arquivo externo.<br>
+							<)link />: define ligações da página com outros arquivos como feeds, CSS, scripts, etc.<br>
+							<(meta />: define propriedades da página, como codificação de caracteres, descrição da página, autor, etc.
+							São meta informações sobre documento. Tais campos são muito usados por mecanismos de busca (como o Google, Yahoo!, Bing) para obterem mais informações sobre o documento,
+							a fim de classificá-lo melhor. Por exemplo, pode-se adicionar o código <)meta name="description" content="descrição da sua página" /> no documento HTML para indicar ao motor
+							de busca que texto de descrição apresentar junto com a ligação para o documento. Para o motor de busca Google, por exemplo, elementos meta como keywords não são utilizadas 
+							para indexar páginas. Apenas <)title> e a meta description são usadas para descrever a página indexada.
+							<br>
+							Obs: Os marcadores <)style> e <)script> servem tanto para delimitar os espaços usados pelos códigos na página quanto para invocar códigos existentes em outros arquivos externos.
+						</p>
+						
+						<p>
+							<b>Corpo</b>
+							<br>
+							<br>
+							Trecho de código HTML.<br>
+							Dentro do corpo podemos encontrar outros vários marcadores que irão moldar a página, como por exemplo:
+							<br>
+							<)h1>, <(h2>, ... <)h6>: Títulos que variam de tamanho dentro das prioridades
+							(sua aparência pode ser alterada com CSS - Cascade Style Sheet - Folhas de
+							Estilo em Cascata).<br>
+							<)p>: Parágrafo.<br>
+							<)br />: quebra de linha.<br>
+							<)table>: cria uma tabela (linhas são criadas com <(TR> e novas células com <(TD>,
+							já os cabeçalhos das colunas são criados com os marcadores <(THead><(TH> e os
+							rodapés com <)TFooter><)TR><)TD>).<br>
+							<(div>: determina uma divisão na página a qual pode possuir variadas formatações.<br>
+							<)b>, <(i>, <)u> e <(s>: negrito, itálico, sublinhado e riscado, respectivamente.<br>
+							<)img />: imagem.<br>
+							<)a>: hiper-ligação para um outro local, seja uma página, um e-mail ou outro serviço.<br>
+							<)textarea>: caixa de texto (com mais de uma linha); estas caixas de texto são muito usadas em blogs,
+							elas podem ser auto selecionáveis e conter outros códigos a serem distribuídos.<br>
+							<)abbr>: abreviação (sigla simplesmente abreviada).<br>
+							<)cite>: citação.<br>
+							<)address>:Endereço.
+						</p>
+						
+						<p>	
+							<b>Cores</b>
+							As cores podem ser atribuídas em CSS inline com o atributo style,
+							ou o com nome de uma classe com o atributo class.
+							<br>
+							Exemplo:
+							<br>
+							<)h1 class="title">Título</(h1>
+							<br>
+							<)p style="color: gray">Parágrafo.</(p>
+							<br>
+							Onde a cor pode ser especificada na forma do nome em inglês,
+							ou um número hexadecimal, ou a notação RGB, RGBA ou HSL/HSLA.
+							<br>
+							Exemplos:
+							<br>
+							Tabela de cores e Lista de cores.
+						</p>
+						
+						<p>
+							<b>Hiperligações</b>
+							<br>
+							<br>
+							Uma possibilidade importante dos documentos HTML é a de fazer hiperligações.
+							Para isso usa-se o marcador <a> (do inglês, anchor). Esta tem os atributos:
+							href que define o alvo da hiperligação (que pode ser uma página de Internet,
+							uma parte da mesma página ou um endereço de email) ou name que define um alvo
+							nessa página (a onde se pode fazer uma hiperligação usando o marcador a com o atributo href).
+							<br>
+							Exemplos:
+							<br>
+							<)a href="ht­tps://pt.wikipedia.org/">Clique aqui para aceder à página principal da Wikipédia em português.</(a><br>
+							<)a name="nome">texto</(a><br>
+							Em que nome e texto podem ser substituídos por o que se desejar. Depois usa-se <)a href="#nome"> </(a> para hiperligar a este "anchor".
+							<br>
+							Diferença entre target="_blank" e target="_new"<br>
+							target="_blank" é usado para abrir links em várias janelas e target="_new"
+							ou target="booger" é usado para abrir vários links em uma janela.
+							<br>
+							Exemplos:
+							<br>
+							<)a href="URL DO LINK" target="_blank">Título</(a><br>
+							<)a href="URL DO LINK" target="_new">Título</(a><br>
+							(<)a href="URL DO LINK" target="booger">Título</a><br>
+							Página em branco é usado about:blank na url do link.
+							<br>
+							Exemplos:
+							<br>
+							(<)a href="about:blank" target="_blank"(>)Página em branco(</)a(>)<br>
+							(<)a href="about:blank" target="_new"(>)Página em branco(</)a(>)<br>
+							(<)a href="about:blank" target="booger"(>)Página em branco(</)a(>)
+						</p>
+						
+						<p>	
+							<b>Caracteres especiais e símbolos</b>
+							<br>
+							<br>
+							Os caracteres especiais definem-se usando comandos que começam com & e terminam com um ;.
+							Alguns exemplos incluem &aacute; (á), &agrave; (à), &atilde; (ã), &acirc; (â), &auml;
+							(ä) e &ccedil; (ç). Qualquer outra vogal pode ser substituída pelo a destes exemplos,
+							incluindo maiúsculas.
+						</p>
+					
+					</article>
+					
+				</div>
+			
+			</div>
+		
+		</section>
+
+		<section id="" class="gallery grid-one white-bg section" >
+
+			<div class="gallery-content grid-one-content main-content" >
+				
+				<h2 class="grid-main-heading" ></h2>
+				
+				<p class="grid-description" ></p>
+
+				<div class="grid" >
+					
+					<div class="gallery-img" >
+
+						<img src="assets/img/" alt="" >
+					
+					</div>
+					
+					<div class="gallery-img" >
+					
+						<img src="assets/img/" alt="" >
+					
+					</div>
+					
+					<div class="gallery-img" >
+					
+						<img src="assets/img/" alt="" >
+					
+					</div>
+					
+					<div class="gallery-img" >
+					
+						<img src="assets/img/" alt="" >
+					
+					</div>
+					
+					<div class="gallery-img" >
+					
+						<img src="assets/img/" alt="" >
+					
+					</div>
+					
+					<div class="gallery-img" >
+					
+						<img src="assets/img/" alt="" >
+					
+					</div>
+				
+				</div>
+			
+			</section>
+
+			<section id="" class="grid-one main-bg section" style="clear:both;" >
+
+				<div class="grid-one-content main-content" >
+
+					<h2 class="grid-main-heading" ></h2>
+
+					<p class="grid-description" ></p>
+
+					<div class="grid" >
+						
+						<article>
+							
+							<h3></h3>
+							
+							<p></p>
+
+						</article>
+						
+						<article>
+						
+							<h3></h3>
+						
+							<p></p>
+						
+						</article>
+						
+						<article>
+						
+							<h3></h3>
+						
+							<p></p>
+						
+						</article>
+						
+					</div>
+
+				</div>
+			
+			</section>
+
+			<section id="" class="white-bg section " >
+				
+				<div class="main-content top3-content" >
+
+					<h2></h2>
+
+					<p></p>
+   
+   					<div class="responsive-table" >
+   
+   					<table>
+   						
+   						<caption></caption>
+   
+   						<thead>
+   
+   							<tr>
+  								<th>col 1</th>
+   								<th>col 2</th>
+   								<th>col 3</th>
+   								<th>col 4</th>
+   								<th>col 5</th>
+   								<th>col 6</th>
+   								<th>col 7</th>
+   								<th>col 8</th>
+   								<th>col 9</th>
+   								<th>col 10</th>
+   							</tr>
+   
+   						</thead>
+   
+   						<tbody>
+   
+   							<tr>
+   								<td>row 1</td>
+   								<td>row 2</td>
+   								<td>row 3</td>
+   								<td>row 4</td>
+   								<td>row 5</td>
+   								<td>row 6</td>
+   								<td>row 7</td>
+   								<td>row 8</td>
+   								<td>row 9</td>
+   								<td>row 10</td>
+   							</tr>
+   							
+   							<tr>
+   								<td>row 1</td>
+   								<td>row 2</td>
+   								<td>row 3</td>
+   								<td>row 4</td>
+   								<td>row 5</td>
+   								<td>row 6</td>
+   								<td>row 7</td>
+   								<td>row 8</td>
+   								<td>row 9</td>
+   								<td>row 10</td>
+   							</tr>
+   							
+   							<tr>
+   								<td>row 1</td>
+   								<td>row 2</td>
+   								<td>row 3</td>
+   								<td>row 4</td>
+   								<td>row 5</td>
+   								<td>row 6</td>
+   								<td>row 7</td>
+   								<td>row 8</td>
+   								<td>row 9</td>
+   								<td>row 10</td>
+   							</tr>
+   
+   							<tfoot>
+   							
+   								<tr>
+   									<td></td>
+   									<td></td>
+   									<td></td>
+   									<td></td>
+   									<td></td>
+   									<td></td>
+   									<td></td>
+   									<td></td>
+   									<td></td>
+   									<td>footer 10</td>
+   								</tr>
+   							
+   							</tfoot>
+   							
+   						</tbody>
+   					
+   					</table>
+   							
+   				</div>
+   			
+   			</div>
+   		
+   		</section>
+
+		<section id="contact" class="main-bg section mar" >
+
+			<div class="main-content intro-content" >
+
+				<div class="intro-img" >
+
+					<img src="assets/img/" alt="" >
+
+				</div>
+
+				<div class="intro-text-content" >
+
+					<h2></h2>
+
+					<p class="per" ></p>
+
+				</div>
+
+				<div class="contac-form" >
+
+				<fieldset>
+
+					<legend></legend>
+
+						<div class="form-group" >
+
+							<label for="first-name">First name</label>
+							
+							<input type="text" id="first-name" name="first-name" placeholder="first name" >
+						
+						</div>		
+
+						<div class="form-group" >
+
+							<label for="last-name">Last name</label>
+
+							<input type="text" id="last-name" name="last-name" placeholder="last name" >
+						
+						</div>
+						
+						<div class="form-group" >
+							
+							<label for="E-mail">E-mail</label>
+						
+							<input type="email" id="E-mail" name="E-mail" placeholder="email@gmail.com" >
+						
+						</div>
+						
+						<div class="form-group" >
+							
+							<label for="Your message">Your message</label>
+						
+							<textarea id="Your message" name="Your message" placeholder="Your message" ></textarea>
+						
+						</div>
+						
+						<div class="form-group" >
+						
+						<button type="submit" >Send message</button>
+						
+						</div>
+					
+					</fieldset>
+				
+				</div>
+			
+			</div>
+		
+		</section>
+						
+		<div class="espaço main-bg" ></div>
+						
+		<footer>
+						
+			<p class="fo" >Feito com <span>♥ </span>por Gideão Alberto Rodrigues</p>
+						
+			<p>
+				
+				<address>jerubaaltorres@gmail.com</address>
+						
+				<address>Gideão Rodrigues</address>
+			
+			</p>
+						
+			<p class="ot" >Luanda-Angola</p>
+						
+			<p class="er" >02/01/2024 01h-10mim</p>
+						
+		</footer>
+		
+		
+		
+		<script type="text/javascript">
+			//<!--
+		
+				function abrir(){
+					document.getElementById("menu").style.bottom="0";
+					document.getElementById("menu").style.height="90rem";
+					document.getElementById("menu").style.position="fixed";
+					document.getElementById("menu").style.overflow="auto";
+                    
+					document.getElementById("link1").style.color="#00FF7F";
+					document.getElementById("link1").style.transition="all 300ms ease-in-out";
+					document.getElementById("link1").style.visibility="visible";
+					
+					document.getElementById("link2").style.color="#00FF7F";
+					document.getElementById("link2").style.transition="all 300ms ease-in-out";
+					document.getElementById("link2").style.visibility="visible";
+					
+					document.getElementById("link3").style.color="#00FF7F";
+					document.getElementById("link3").style.transition="all 300ms ease-in-out";
+					document.getElementById("link3").style.visibility="visible";
+					
+					document.getElementById("link4").style.color="#00FF7F";
+					document.getElementById("link4").style.transition="all 300ms ease-in-out";
+					document.getElementById("link4").style.visibility="visible";
+					
+					document.getElementById("link5").style.color="#00FF7F";
+					document.getElementById("link5").style.transition="all 300ms ease-in-out";
+					document.getElementById("link5").style.visibility="visible";
+					
+					document.getElementById("link6").style.color="#00FF7F";
+					document.getElementById("link6").style.transition="all 300ms ease-in-out";
+					document.getElementById("link6").style.visibility="visible";
+					
+					document.getElementById("link7").style.color="#00FF7F";
+					document.getElementById("link7").style.transition="all 300ms ease-in-out";
+					document.getElementById("link7").style.visibility="visible";
+					
+					document.getElementById("link8").style.color="#00FF7F";
+					document.getElementById("link8").style.transition="all 300ms ease-in-out";
+					document.getElementById("link8").style.visibility="visible";
+					
+					document.getElementById("abrirmenu").style.visibility="collapse";
+					document.getElementById("fecharmenu").style.visibility="visible";
+				}
+				
+				function fechar(){
+				
+					document.getElementById("menu").style.height="21rem";
+					document.getElementById("menu").style.position="absolute";
+                    document.getElementById("menu").style.overflow="hidden";
+				
+					document.getElementById("link1").style.visibility="collapse";
+				
+					document.getElementById("link2").style.visibility="collapse";
+				
+					document.getElementById("link3").style.visibility="collapse";
+				
+					document.getElementById("link4").style.visibility="collapse";
+				
+					document.getElementById("link5").style.visibility="collapse";
+				
+					document.getElementById("link6").style.visibility="collapse";
+				
+					document.getElementById("link7").style.visibility="collapse";
+				
+					document.getElementById("link8").style.visibility="collapse";
+				
+					document.getElementById("abrirmenu").style.visibility="visible";
+					document.getElementById("fecharmenu").style.visibility="collapse";
+				}
+		
+			//-->
+		</script>
+	
+	</body>
+
+</html>

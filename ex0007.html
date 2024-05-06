@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Selecionando com o DOM</title>
+    <link rel="stylesheet" href="assets/css/Cursojs.css">
+</head>
+<body>
+    <section class="sessão">
+        <div class="limite">
+            <h1 id="test" class="cabecalho">Dando os primeiros passos com o DOM</h1>
+            <p name="par" class="paragrafo">Aqui vai o resultado</p>
+            <p class="teste" paragrafo>Apredendo a usar o <b>DOM</b> em JavaScript</p>
+            <p id="cor" class="paragrafo">Click em mim</p>
+        </div>
+    </section>
+	
+    <script>
+        window.document.write(window.document.characterSet);
+        window.document.write(window.document.appName);
+        window.document.write(window.document.URL);
+        var negrito = window.document.getElementsByTagName("b")[0];
+        var cabecalho = window.document.getElementById("test");
+        var p1 = window.document.getElementsByName("par")[0];
+        var p2 = window.document.getElementsByClassName("teste")[0];
+        var div = window.document.querySelector("div#cor");
+        negrito.style.color="aqua";
+        cabecalho.style.backgroundColor="gray";
+        p1.style.fontSize="2rem";
+        p2.style.color="red";
+        div.style.backgroundColor="red";
+    </script>
+</body>
+</html>

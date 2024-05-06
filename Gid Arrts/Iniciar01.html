@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<style type="text/css">
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+html {
+font-size:62.5%;
+font-family:Arial,sans-serif;
+}
+header {
+width:100%;
+background-color:red;
+height:15rem;
+text-align:center;
+padding:1rem 0;
+}
+
+header h1{
+color:aqua;
+font-size:3rem;
+font-family:fantasy;
+}
+
+header p{
+color:aqua;
+font-size:1.6rem;
+margin-top:1rem;
+}
+
+main {
+display:block;
+height:32rem;
+background-color:aqua;
+padding:2rem 0 1rem 0.5rem;
+width:100|;
+}
+
+main p label {
+display:block;
+color:red;
+font-size:1.6rem;
+cursor:pointer;
+font-family:sans-serif;
+margin:0.5rem;
+width:50%;
+}
+
+footer {
+width:100%;
+height:10rem;
+background-color:red;
+text-align:center;
+color:aqua;
+padding:2rem 0 0 0;
+font-size:1.6rem;
+}
+
+.form {
+width:80%;
+height:3rem;
+border:0.2rem solid red;
+font-size:1.6rem;
+margin:1rem;
+border-radius:1rem;
+background-color:aqua;
+}
+
+.form:focus {
+border:none;
+box-shadow:0 0 0.5rem 0.2rem red;
+}
+
+
+.bform{
+width:80%;
+height:3rem;
+margin:1rem 3rem;
+border:none;
+background:red;
+color:aqua;
+font-size:1.5rem;
+border-radius:1rem;
+transition:all 300mls ease-in-out;
+}
+
+/*.bform:hover {
+border:0.2rem solid red;
+background:none;
+color:red;
+}*/
+
+.errado {
+color:red;
+font-size:1rem;
+}
+</style>
+</head>
+<body>
+	<article>
+		<header>
+			<h1>Iniciar Sessão</h1>
+			<p>Peencha o formulário para iniciar</p>
+		</header>
+		
+		<main>
+			<p>
+				<label for="NomeCompleto">Nome Completo:</label>
+				<input type="text" id="NomeCompleto" class="form" placeholder="Primeiro e o último" >
+				<p id="naousuario" class="errado" ></p>
+			</p>
+			
+			<p>
+				<label for="password">Palavra-Passe:</label>
+				<input type="password" id="password" class="form" placeholder="Palavra-Passe" >
+				<p id="passerrada" class="errado" ></p>
+			</p>
+			
+			<p>
+				<button type="submit" id="bte" class="bform" onclick="usuario()">Iniciar</button>
+				<button type="submit" id="btc" class="bform" >Cancelar</button>
+			</p>
+		</main>
+		
+		<footer>
+			<p>
+				<address>
+					jerubaaltorres@gmail.com
+				</address>
+			</p>
+		</footer>
+	</article>
+<script type="text/javascript">
+
+function usuario(){
+var input1 = document.getElementById("NomeCompleto").value;
+var input2 = document.getElementById("password").value;
+var p1 = document.getElementById("naousuario");
+var p2 = document.getElementById("passerrada");
+
+
+var resgitado = (input1 == "Gideão Rodrigues") ? alert("Seja bem-vindo sr. "+ input1) : p1.innerHTML="Não esta registado!";
+var valido = (input2 == "JESUS CRISTO") ? "" : "Palavra-passe errada!";
+p2.innerHTML=valido;
+}
+
+</script>
+</body>
+</html>

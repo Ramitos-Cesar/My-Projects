@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="PT-BR" >
+<head>
+<meta charset="UTF-8" />
+<title>treinando</title>
+<style type="text/css">
+</style>
+</head>
+<body>
+<h1 id="teste" ></h1>
+<p id="test" ></p>
+<script type="text/javascript">
+function recarregar(){
+var nome = window.prompt("Qual é o seu nome?");
+if(nome === "" || nome == null && nome == undefined){
+document.querySelector("h1#teste").innerHTML = "Escreve o seu nome!";
+}else{
+document.querySelector("h1#teste").innerHTML = "Olá Sr(a). " + nome + ", seja bem vindo!";
+document.querySelector("p#test").innerHTML = "Sr(a). " + nome + " o teu nome tem " + nome.length + " letra(s).";
+}
+}
+recarregar();
+</script>
+</body>
+</html> 

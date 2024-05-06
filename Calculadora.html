@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html lang="PT-BR">
+
+<head>
+
+    <meta charset="UTF-8"/>
+
+    <title>Calculadora</title>
+
+    <link rel="stylesheet" href="assets/css/calculadora.css"/>
+
+</head>
+
+<body>
+
+    <section class="corpodacal">
+
+        <div class="limite">
+
+            <header class="visordacal">
+            
+                <h1 id="receboper">
+                
+                    <input id="operador" type="text" class="operadores" name="operador"disabled/>
+                    
+                    
+                </h1>
+                
+                <div class="res">
+                
+                    <p id="guarval">
+                
+                        <input id="privaldacals" type="text" class="privaldacal"  name="privaldacals" disabled/>
+                
+                    </p>
+                
+                    <p id='receber'>
+                
+                        <input id="recebvaldacals" type="text" class="recebvaldacal"  name="recebvaldacals" disabled/>
+                
+                    </p>
+                
+                </div>
+                
+            </header>
+
+            <article class="contdacal">
+
+                <div class="ope">
+
+                    <button id="perce" class="opdacal" onclick="percetangem()">%</button>
+
+                    <button id="divi" class="opdacal" onclick="dividir()">÷</button>
+
+                    <button id="vezes" class="opdacal" onclick="vezes()">×</button>
+                    
+                    <button id="menos" class="opdacal" onclick="menos()">-</button>
+
+                </div>
+
+                <div class="num">
+
+                    <button id="sete" class="opdacal" onclick="sete()">7</button>
+
+                    <button id="oito" class="opdacal" onclick="oito()">8</button>
+
+                    <button id="nove" class="opdacal" onclick="nove()">9</button>
+
+                    <button id="mais" class="opdacal" onclick="mais()">+</button>
+
+                    <button id="quatro" class="opdacal" onclick="quatro()">4</button>
+
+                    <button id="cinco" class="opdacal" onclick="cinco()">5</button>
+
+                    <button id="seis" class="opdacal" onclick="seis()">6</button>
+
+                </div>
+
+                <div class="eros">
+
+                    <button id="um" class="opdacal" onclick="um()">1</button>
+
+                    <button id="dois" class="opdacal" onclick="dois()">2</button>
+
+                    <button id="três" class="opdacal" onclick="tres()">3</button>
+
+                    <button id="igual" class="opdacal" onclick="igual()">=</button>
+
+                    <button id="zero" class="opdacal" onclick="zero()">0</button>
+
+                    <button id="zerozero" class="opdacal" onclick="zerozero()">00</button>
+
+                    <button id="ponto" class="opdacal" onclick="ponto()">.</button>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+    <script src="assets/js/calculadora.js"></script>
+
+</body>
+
+</html>

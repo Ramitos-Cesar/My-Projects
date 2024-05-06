@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Aula 11 e 12</title>
+		<style type="text/css">
+		div responsive-table {
+		max-width:100%;
+		overflow-x:auto;
+		}
+		table {
+		border-collapse:collapse;
+		width:100%;
+		}
+		table th{
+		background-color:#ddd;
+		}
+		table td,th{
+		border:2px solid #ccc;
+		padding:5px;
+		text-align:left;
+		}
+		table caption{
+		caption-side:top;
+		text-align:left;
+		font-style:italic;
+		font-size:14px;
+		}
+		tfoot{
+		background-color:#ddd;
+		font-style:oblique;
+		}
+		label {
+		cursor:pointer;
+		}
+		</style>
+	</head>
+	<body>
+		<h1>Tabela-colunas e linhas</h1>
+		<div>
+			<table>
+				<caption>Inserção de tabelas</caption>
+				<thead>
+					<tr>
+						<th>linha 1</th>
+						<th>linha 2</th>
+						<th>linha 3</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>coluna 1</td>
+						<td>coluna 2</td>
+						<td>coluna 3</td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr>
+						<td>rodapé 1</td>
+						<td >rodapé 2</td>
+					</tr>
+				</tfoot>
+			</table>
+		</div>
+		<form action="#" target="_blank"
+		autocomplete="off">
+			<section>
+				<h1>Formulários</h1>
+				<p>Testes de inpits e campos</p>
+				<fieldset>
+					<legend>Preencha o formulário</legend>
+					<p>
+						<label for="Nome">Nome completo</label>
+						<input type="text" id="nome" 
+						name="nome" placeholder="Primeio e último"
+						required="required"  >
+					</p>
+					<p>
+					Estado 
+					<br>
+						<label for="ckeck">check</label>
+						<input type="checkbox" id="check" 
+						name="check" value="check" required="required"  ><br>
+						<label for="ckeck">No check</label>
+						<input type="checkbox" id="no check" 
+						name="no check" value="no check" required="required"  >
+					</p>
+					<p>
+						Género<br>
+						<label for="femenino">Femenino</label>
+						<input type="radio" id="femenino"
+						name="femenino" value="femenino" required="required"  ><br>
+						<label for="masculino">Masculino</label>
+						<input type="radio" id="masculino"
+						name="masculino" value="masculino" required="required" >
+					</p>
+					<p>
+						<label for="data">Data</label><br>
+						<input type="date" id="data" 
+						name="data" value="2023-12-09" required="required" >
+					</p>
+					<p>
+						<label for="datetime">Data e Hora</label><br>
+						<input type="datetime" id="datetime" 
+						name="datetime" required="required" >
+					</p>
+					<p>
+						<label for="time">Hora</label><br>
+						<input type="time" id="time" 
+						name="time" value="18:57:00"
+						required="required" >
+					</p>
+					<p>
+						<label for="color">Cor</label><br>
+						<input type="color" id="color" 
+						name="color" value="#ffffff" 
+						required="required" >
+					</p>
+					<p>
+						<label for="email">Endereço de e-mail</label>
+						<input type="email" id="email"
+						name="email" placeholder="exemplo@gmail.com" 
+						required="required" >
+					</p>
+					<p>
+						<label for="file">Introduz um ficheiro</label>
+						<input type="file" id="file" name="file" 
+						value="file" required="required" >
+					</p>
+					<p>
+						<label for="number">N° de telemovel</label>
+						<input type="number" id="number" name="number" 
+						placeholder="Seu contacto" required="required" >
+					</p>
+					<p>
+						<label for="password">Palavra-Passe</label><br>
+						<input type="password" id="password" 
+						name="password" placeholder="Insira sua senha"  required="required" >
+					</p>
+					<p>
+						<label for="range">Range</label>
+						<input type="range" id="range" name="range" 
+						min="2" max="10" step="2" >
+					</p>
+					<p>
+						<label for="url">Escrever seu url</label>
+						<input type="url" id="url" name="url" 
+						placeholder="https://www.exemplo.com" >
+					</p>
+					<p>
+						<label for="search">faça sua pesquisa</label>
+						<input type="search" id="search" name="search" 
+						placeholder="Pesquisar" >
+					</p>
+					<p>
+						<label for="select">Escolher </label>
+						<select>
+							<option>nivel 1</option>
+							<option>nivel 2</option>
+							<option>nivel 3</option>
+						</select>
+					</p>
+					<p>
+						<label for="textarea">Escrva um comentário</label>
+						<textarea id="textarea" 
+						name="textarea" ></textarea>
+					</p>
+					<p>
+						<button type="submit" >Enviar formulário</button>
+						<button type="resert" >reiniciar</button>
+					</p>
+				</fieldset>
+			</section>
+		</form>
+		<p>
+		<a href="aula 13 e 14.html" >
+		Seguinte</a>
+		</p>
+	</body>
+</html>

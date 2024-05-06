@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Verificador de nacionalidade</title>
+    <link rel="stylesheet" href="assets/css/Cursojs.css">
+</head>
+<body>
+    <section class="sessão">
+        <div class="limite">
+            <h1 class="cabecalho">Verificar Nacionalidade</h1>
+            <p class="paragrafo">Conheça o seu país de origem</p>
+            <input type="text" id="nome" name="nome" placeholder="Nome" class="input">
+            <input type="text" id="país" name="país" placeholder="País" class="input">
+            <input type="button" value="Ver Nacionalidade" id="botão" class="botão">
+            <p id="res" class="paragrafo"></p>
+        </div>
+    </section>
+    <script>
+        //Declarar Variável
+            var botão = document.querySelector("input#botão");
+            var p = document.querySelector('p#res');
+        //Chamar eventos
+            botão.addEventListener("click", validar);
+        //Criar função
+            function VerNacionalidade(){
+                //Declarar variável
+                    let nome = document.querySelector("input#nome").value;
+                    let país = document.querySelector("input#país").value;
+                //Criar Condição
+                    if(país == "Angola"){
+                        p.innerHTML = `Olá! Sr(a) ${nome}, o seu país de origem é ${país}. Você é Angolano.`;
+                    }else{
+                        p.innerHTML = `Olá! Sr(a) ${nome}, o seu país de origem é ${país}. Você é Estrangeiro.`;
+                    }
+            }
+            function validar(){
+                //Declarar variável
+                    let nome = document.querySelector("input#nome").value;
+                    let país = document.querySelector("input#país").value;
+                //Criar Condição
+                    if(nome == "" || país == ""){
+                        p.innerHTML = `Nada escrito.`;
+                    }else{
+                        VerNacionalidade();
+                    }
+            }
+    </script>
+</body>
+</html>

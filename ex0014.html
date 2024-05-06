@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Data</title>
+    <link rel="stylesheet" href="assets/css/Cursojs.css">
+</head>
+<body>
+    <section class="sessão">
+        <div class="limite">
+            <h1 class="cabecalho">Data</h1>
+            <p class="paragrafo">Selecione a sua data</p>
+            <select id="dia" class="botão" name="dia">
+                <option value="Dia" label="Dia" disabled selected>Dia</option>
+            </select>
+            <select id="mês" class="botão" name="mês">
+                <option value="Mês" label="Mês" disabled selected>Mês</option>
+            </select>
+            <select id="ano" class="botão" name="ano">
+                <option value="Ano" label="Ano" disabled selected>Ano</option>
+            </select>
+        </div>
+    </section>
+    <!--
+        For(let tabuada = 1; tabuada <= 12; tabuada ++){
+            Console.log(tabuada);
+        }
+    -->
+    <script>
+        var ano = new Date().getFullYear();
+        var Dia = document.querySelector('select#dia');
+        var Mês = document.querySelector('select#mês');
+        var Ano = document.querySelector('select#ano');
+        for(let DIA = 1; DIA <= 31; DIA++){
+            Dia.innerHTML += `<option value="${DIA}" label="${DIA}">${DIA}</option>`;
+        };
+        for( let MÊS = 0; MÊS <= 11; MÊS++){
+            switch(MÊS){
+                case 0:
+                    Mês.innerHTML += `<option value="Janeiro" label="Janeiro">Janeiro</option>`;
+                    break
+                case 1:
+                    Mês.innerHTML += `<option value="Fevereiro" label="Fevereiro">Fevereiro</option>`;
+                    break
+                case 2:
+                    Mês.innerHTML += `<option value="Março" label="Março">Março</option>`;
+                    break
+                case 3:
+                    Mês.innerHTML += `<option value="Abril" label="Abril">Abril</option>`;
+                    break
+                case 4:
+                    Mês.innerHTML += `<option value="Maio" label="Maio">Maio</option>`;
+                    break
+                case 5:
+                    Mês.innerHTML += `<option value="Junho" label="Junho">Junho</option>`;
+                    break
+                case 6:
+                    Mês.innerHTML += `<option value="Julho" label="Julho">Julho</option>`;
+                    break
+                case 7:
+                    Mês.innerHTML += `<option value="Agosto" label="Agosto">Agosto</option>`;
+                    break
+                case 8:
+                    Mês.innerHTML += `<option value="Setembro" label="Setembro">Setembro</option>`;
+                    break
+                case 9:
+                    Mês.innerHTML += `<option value="Outubro" label="Outubro">Outubro</option>`;
+                    break
+                case 10:
+                    Mês.innerHTML += `<option value="Novembro" label="Novembro">Novembro</option>`;
+                    break
+                case 11:
+                    Mês.innerHTML += `<option value="Dezembro" label="Dezembro">Dezembro</option>`;
+                    break
+                default:
+                    Mês.innerHTML += `<option value="" label="">Não Existe</option>`;
+                    break
+            };
+        };
+        for( let ANO = 1024; ANO <= ano; ANO++){
+            Ano.innerHTML += `<option value="${ANO}" label="${ANO}">${ANO}</option>`;
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Aula 19 e 20</title>
+<style type="text/css">
+header {
+background:green;
+padding:10px;
+}
+p:not(.try){
+background:yellow;
+}
+p:not(h1) +.cty {
+color:red;
+}
+nav{
+background:fuchsia;
+padding:10px;
+}
+ul li:nth-child(2) {
+color:blue;
+}
+ul li:nth-child(even) {
+background:black;
+color:blue;
+}
+ul li:nth-child(odd) {
+background:yellow;
+color:white;
+}
+#nav{
+background:gray;
+padding:10px;
+}
+#un #list:nth-child(3n) {
+background:white;
+color:black;
+}
+#un #list:nth-child(4n+6) {
+background:red;
+color:green;
+}
+section {
+background:red;
+padding:10px;
+}
+#aa::after{
+content:"%";
+}
+#a-::before{
+content:"★";
+}
+#b::first-letter{
+font-size:50px;
+display:block;
+float:left;
+margin:0 10px 10px 0;
+}
+#b::first-line{
+color:blue;
+}
+#b::selection{
+background:purple;
+color:aqua;
+}
+input::placeholder{
+color:red;
+}
+</style>
+</head>
+<body>
+<header>
+<h1>Selectores :not e :nth-child</h1>
+<p class="cty">Html e Css</p>
+<p class="cty">Html e Css</p>
+<p class="cty">Html e Css</p>
+<p class="try">Html e Css</p>
+<p class="cty">Html e Css</p>
+<p class="cty">Html e Css</p>
+<p class="cty">Html e Css</p>
+</header>
+<nav>
+<ul>
+<li>Só teste</li>
+<li>Só teste</li>
+<li>Só teste</li>
+<li>Só teste</li>
+<li>Só teste</li>
+<li>Só teste</li>
+<li>Só teste</li>
+<li>Só teste</li>
+<li>Só teste</li>
+<li>Só teste</li>
+</ul>
+</nav>
+<nav id="nav" >
+<ul id="un"  >
+<li id="list" >Só teste</li>
+<li id="list">Só teste</li>
+<li id="list">Só teste</li>
+<li id="list">Só teste</li>
+<li id="list">Só teste</li>
+<li id="list">Só teste</li>
+<li id="list">Só teste</li>
+<li id="list">Só teste</li>
+<li id="list">Só teste</li>
+<li id="list">Só teste</li>
+</ul>
+</nav>
+<section>
+<h2>Pseudo elementos- ::before, ::after e outros</h2>
+<ul>
+<li id="a">Só teste</li>
+<li id="aa">Só teste</li>
+<li id="a">Só teste</li>
+<li id="aa">Só teste</li>
+</ul>
+<p id="b" >Mimistério de Recursos Minerais e Petróleos-                    
+                
+    Documentos necessários para o licenciamento:
+
+Carta de resposta ou Intensão
+
+Projecto ou Plano de prospecção e Exeploração
+
+    Declaração de capacidade financeira, certificado pela ( AGT)
+
+Certificado do INAPEM
+
+ Certidão de não devedor, certificado pela (AGT) e actualizada
+
+Titulo de concessão de terra ou 
+Contrato de parceria       
+
+Documento de identificação dos respeitivos represetantes
+</p> 
+<input type="text" placeholder="oi" >
+</section>
+<p>
+<a href="aula 21 e 22.html" >
+Seguinte</a>
+</p>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Calculadora de soma</title>
+	<link rel="stylesheet" href="assets/css/Cursojs.css">
+</head>
+<body>
+    <section class="sessão">
+        <div class="limite">
+            <h1 class="cabecalho">Somar valores</h1>
+            <input type="number" name="pn" id="pn" class="input">
+            <input type="number" name="sn" id="sn" class="input">
+            <input type="button" id="botao" value="somar" class="botão">
+            <div id="res" class="paragrafo"></div>
+        </div>
+    </section>
+	<script type="text/javascript">
+        var botao = document.getElementById("botao");
+        botao.addEventListener("click", somar);
+        function somar(){
+            var pn = document.getElementById("pn").value;
+            var sn = document.getElementById("sn").value;
+            var res = document.querySelector("div#res");
+            var s = Number(pn) + Number(sn);
+            if(pn == "" || sn == ""){
+                res.innerHTML = `Nada para somar`;
+            }else{
+                res.innerHTML = `A soma entre ${pn} e ${sn} é ${s}.`;
+            }
+            
+        }
+	</script>
+</body>
+</html>

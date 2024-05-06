@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Aplicando Eventos Com o DOM</title>
+	<link rel="stylesheet" href="assets/css/Cursojs.css">
+</head>
+<body>
+    <section class="sessão">
+        <div class="limite">
+            <div id="area" style="width: 20rem; height: 20rem; background-color: chocolate; color: green; font: normal 3rem arial;">interaja...</div>
+        </div>
+    </section>
+	<script type="text/javascript">
+		var div = document.querySelector("div#area");
+		div.addEventListener("click", clicou);
+		div.addEventListener("mouseenter", entrou);
+		//div.addEventListener("mousemove", dentro);
+		div.addEventListener("mouseout", saio);
+		function clicou(){
+			div.innerHTML = `Você clicou na div!`;
+		}
+		function entrou(){
+			div.innerHTML = `Você entrou na div!`;
+		}
+        /*
+		function dentro(){
+			div.innerHTML = `Você está dentro da div!`;
+		}
+        */
+		function saio(){
+			div.innerHTML = `Você saio da div!`;
+		}
+	</script>
+</body>
+</html>

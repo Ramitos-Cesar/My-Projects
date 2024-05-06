@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+    <head>
+       <meta charset="UTF-8"/>
+	   <meta name=”viewport” content=”width-device-width, initial-scale-1.0”>
+	   <meta http-equiv=”X-UA-Compatible” contente=”ie-edge”>
+	   <title>O que aprendeu!</title>
+       <style>
+        
+           *{
+               margin: 0;
+               padding: 0;
+               box-sizing: border-box;
+            }
+           html{
+               font-size: 62.5%;
+           }
+           body{
+               font: normal 2.5rem curvose;
+           }
+           section{
+               background-color: #649117;
+               width: 100%;
+               height: 87.1rem;
+               padding: 5rem 0 0 0;
+           }
+           .limite{
+               width: 80rem;
+               margin: 0 auto;
+               background-color: whitesmoke;
+               border-radius: 1rem;
+               
+            }
+           div{
+               text-align: center;
+               justify-content: center;
+           }
+           div h1{
+               margin: 2rem;
+               font-family: arial;
+               text-transform: uppercase;
+               color: chocolate;
+               text-shadow: -0.2rem 0 black;
+            }
+           header.limite div p{
+               text-shadow: -0.2rem -0.2rem #649117;
+               font-family: monospace;
+               word-spacing: 2;
+               letter-spacing: 5;
+               margin: 2rem;
+               color: greenyellow;
+               text-transform: capitalize;
+           }
+           label{
+               font-family: serif;
+               font-size: 1.6rem;
+           }
+           .input-conver{
+               border-radius: 1rem;
+               border: 0.2rem solid greenyellow;
+               outline: none;
+               width: 30rem;
+               padding: 1rem;
+               color: greenyellow;
+               margin: 1rem;
+            }
+           .input-conver:focus{
+                box-shadow: -0.2rem 0.2rem 0.2rem 0.1rem black;
+               border: none;
+           }
+           .botaover{
+               width: 30rem;
+               height: 3rem;
+               text-align: center;
+               justify-content: center;
+               border: 0.2rem solid greenyellow;
+               margin: 1rem 0;
+               color: greenyellow;
+               font: normal 2rem serif;
+               border-radius: 1rem;
+           }
+           .botaover:hover{
+               background-color: greenyellow;
+               color: white;
+           }
+       </style>
+    </head>
+    <body>
+        <section>
+            <header class="limite">
+                <div >
+                    <h1>Conversor</h1>
+                    <p>Venha testar!</p>
+                </div>
+            </header>
+            <div  class="limite">
+                
+                    <p class="verificado" id="ver">
+                        <label for="nome">Qual é o seu nome?</label><br>
+                        <input type="text" id="nome" name="nome" class="input-conver" placeholder="Nome"/>
+                        <span class="nomedousuario" id="nomedousuario"></span>
+                   </p>
+                    <p class="coverter" id="conv">
+                        <label for="inteiro">De número real para inteiro:</label><br>
+                        <input type="number" id="inteiro" name="inteiro" class="input-conver" placeholder="exemplo 2.2"/>
+                        <span class="nomedousuario" id="valorinteiro"></span>
+                    </p>
+                    <p class="covertido" id="conver">
+                        <label for="real">De número inteiro para real:</label><br>
+                        <input type="number" id="real" name="real" class="input-conver" placeholder="exemplo 2"/>
+                        <span class="nomedousuario" id="valorreal"></span>
+                    </p>
+                    <p id="resposta"></p>
+                    <button onclick="converter()" id="paraver" class="botaover">Converter</button>
+            </div>
+         </section>
+        <script>
+            function converter(){
+                var nome = document.querySelector("input#nome").value;
+                var inteiro = Number.parseInt(document.querySelector('input#inteiro').value);
+                var real = Number.parseFloat(document.querySelector("input#real").value);
+                var realconver = real.toFixed(1).replace('.', ',');
+                if(nome == "" || inteiro == "" || real == ""){
+                    document.querySelector("input#nome").style.border="0.2rem solid red";
+                    document.querySelector("input#inteiro").style.border="0.2rem solid red";
+                    document.querySelector("input#real").style.border="0.2rem solid red";
+                    document.querySelector("span#nomedousuario").innerHTML = `Escreve o teu nome`;
+                    document.querySelector("span#valorinteiro").innerHTML = `Escreve um número`;
+                    document.querySelector("span#valorreal").innerHTML = `Escreve um número`;
+                }else {
+                    document.querySelector('p#resposta').innerHTML = `Olá, ${nome}.<br> O seu nome tem ${nome.length} letra(s).<br>O seu nome em maiúsculas é ${nome.toUpperCase()}.<br>O seu nome em menúsculas é ${nome.toLowerCase()}.<br> O valor convertido de real para inteiro é ${inteiro}.<br> O valor convertido de inteiro para real é ${realconver}.`;
+                }
+            }
+        </script>
+   </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Verificando a velocidade</title>
+	<link rel="stylesheet" href="assets/css/Cursojs.css">
+</head>
+<body>
+    <section class="sessão">
+        <div class="limite">
+            <h1 class="cabecalho">Verificando a velocidade</h1>
+            <p class="paragrafo">Informe o seu nome e a sua velocidade.
+                <br>O limite de velocidade permitido é de 
+                <b>60km/h</b>.
+            </p>
+            <input type="text" name="nome" id="nome" placeholder="Nome" class="input">
+            <input type="number" name="carro" id="carro" placeholder="Velocidade" class="input">
+            <input type="button" name="ver" id="ver" value="Verificar" class="botão">
+            <p id="veri" class="paragrafo"></p>
+        </div>
+    </section>
+	<script type="text/javascript">
+        //Declarar variáveis
+            var ver = document.getElementById('ver');
+            var veri = document.getElementById('veri');
+            var nome = document.querySelector("input#nome").value;
+            var carro = document.getElementById("carro").value;
+        //Chamar um evento
+            ver.addEventListener("click", validar);
+            //  ver.addEventListener("click", velocidade);
+        //Criar função
+            function velocidade(){
+                var nome = document.querySelector("input#nome").value;
+                var carro = document.getElementById("carro").value;
+                if( carro > 60){
+                    veri.innerHTML = `O Sr(a). ${nome}, está andando a ${carro} km/h. Você está em excesso de velocidade, multado!<br>`;
+                    veri.innerHTML += `Usa sempre o sinto de segurança.`;
+                }else{
+                    veri.innerHTML = `O Sr(a). ${nome}, está andando a ${carro} km/h. Você está indo muito bem!<br>`;
+                    veri.innerHTML += `Usa sempre o sinto de segurança.`;
+                }
+            }
+            function validar(){
+                var nome = document.querySelector("input#nome").value;
+                var carro = document.getElementById("carro").value;
+                if(nome == "" || carro == ""){
+                    veri.innerHTML = `Nada foi escrito.`;
+                }else{
+                    velocidade();
+                }
+            }
+	</script>
+</body>
+</html>
